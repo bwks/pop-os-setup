@@ -1,18 +1,6 @@
 #! /usr/bin/bash
 
-HR="=>"
-
-install_zsh() {
-  CMD="zsh"
-  echo "$HR Checking if $CMD is installed";
-  if ! [[ -x "$(command -v $CMD)" ]]; then
-    echo "$HR $CMD is not currently installed.";
-    echo "$HR Installing ZSH";
-    sudo apt install -y $CMD;
-  else
-    echo "$HR $CMD is already installled";
-  fi
-}
+source ./shared.sh
 
 configure_zsh() {
   ZSH_SHELL="/usr/bin/zsh";
@@ -40,8 +28,7 @@ install_oh_my_zsh() {
   fi
 }
 
-
-install_zsh;
+install_package zsh;
 echo "";
 configure_zsh;
 echo "";
