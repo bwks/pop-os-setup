@@ -8,7 +8,7 @@ dirs=(
 create_dirs() {
   echo "$HR Creating Directories"; 
   for dir in "${dirs[@]}"; do
-    if [ ! -d $dir ]; then
+    if [[ ! -d $dir ]]; then
       echo "$HR Creating: $dir"
       mkdir -p $dir;
     else
