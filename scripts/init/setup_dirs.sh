@@ -1,9 +1,11 @@
 #! /usr/bin/env bash
 
-source ./shared.sh
+source $(dirname "$0")/../shared.sh;
 
 dirs=(
+  ~/.config/
   ~/.local/bin
+  ~/.zshrc.local/
 )
 create_dirs() {
   echo "$HR Creating Directories"; 

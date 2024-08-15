@@ -1,0 +1,23 @@
+# Path to your oh-my-zsh installation.
+export ZSH="$HOME/.oh-my-zsh"
+
+# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
+ZSH_THEME="robbyrussell"
+
+# Oh My ZSH plugins
+plugins=(git)
+
+# Oh My ZSH
+source $ZSH/oh-my-zsh.sh
+
+# Starship Prompt
+eval "$(starship init zsh)"
+
+# Source local configs
+LOCAL_ZSHRC="$HOME/.zshrc.local/"
+if [[ -d "$LOCAL_ZSHRC" ]]; then
+  rc_files=`ls $LOCAL_ZSHRC/*_rc`
+  for rc_rile in $rc_rc_riles; do
+    source $file
+  done
+fi

@@ -1,6 +1,6 @@
 #! /usr/bin/bash
 
-source ./shared.sh
+source $(dirname "$0")/../shared.sh;
 
 setup_vscode() {
   if [[ ! -f /etc/apt/sources.list.d/vscode.list ]]; then
@@ -17,7 +17,13 @@ setup_vscode() {
 }
 
 install_vscode() {
-  install_package code;
+
+  if ! [[ -x "$(command -v code)" ]]; then
+    echo "$HR Installing VSCode";
+    install_package code;
+  else
+    echo "$HR VSCode already installed";
+  fi
 }
 
 setup_vscode;

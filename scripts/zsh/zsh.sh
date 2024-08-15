@@ -1,6 +1,12 @@
 #! /usr/bin/bash
 
-source ./shared.sh
+source $(dirname "$0")/../shared.sh;
+
+cat << EOF > /some/filename
+Some content
+  indented content
+more content
+EOF
 
 configure_zsh() {
   ZSH_SHELL="/usr/bin/zsh";
@@ -28,9 +34,14 @@ install_oh_my_zsh() {
   fi
 }
 
+configure_zshrc() {
+  echo "$HR Configuring zshrc";
+  cat $(dirname "$0")/zshrc > $HOME/.zshrc
+}
+
+
+
 install_package zsh;
-echo "";
 configure_zsh;
-echo "";
 install_oh_my_zsh;
-echo "";
+configure_zshrc;

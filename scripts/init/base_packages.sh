@@ -1,8 +1,9 @@
 #! /usr/bin/bash
 
-source ./shared.sh
+source $(dirname "$0")/../shared.sh;
 
 packages=(
+  curl
   wget
   gpg
   apt-transport-https
