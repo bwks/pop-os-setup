@@ -3,9 +3,10 @@
 source $(dirname "$0")/../shared.sh;
 
 dirs=(
-  ~/.config/
-  ~/.local/bin
-  ~/.zshrc.local/
+  ${HOME}/.config/
+  ${HOME}/.local/bin
+  ${HOME}/.local/share/fonts
+  ${HOME}/.zshrc.local/
 )
 create_dirs() {
   echo "$HR Creating Directories"; 
