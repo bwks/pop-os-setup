@@ -7,6 +7,8 @@ packages=(
   wget
   gpg
   apt-transport-https
+  python3-pip
+  python3-venv
 )
 
 echo "$HR Installing Packages";
