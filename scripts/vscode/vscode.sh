@@ -17,7 +17,6 @@ setup_vscode() {
 }
 
 install_vscode() {
-
   if ! [[ -x "$(command -v code)" ]]; then
     echo "$HR Installing VSCode";
     install_package code;

@@ -15,7 +15,7 @@ install_starship() {
 
 configure_starship() {
   echo "$HR configuring  starship prompt";
-  cat $(dirname "$0")/starship.toml > $HOME/.config/starship.toml
+  cp $(dirname "$0")/starship.toml $HOME/.config/starship.toml
   echo 'eval "$(starship init zsh)"' > $HOME/.zshrc.local/starship_rc;
 }
 

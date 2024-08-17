@@ -24,7 +24,7 @@ install_alacritty() {
 configure_alacritty() {
   echo "$HR Configuring Alacritty";
   ALACRITTY_CONFIG_DIR=$HOME/.config/alacritty;
-  mkdir -p $ALACRITTY_CONFIG_DIR
+  mkdir -p $ALACRITTY_CONFIG_DIR;
   cp $(dirname "$0")/alacritty.toml $ALACRITTY_CONFIG_DIR;
   cp -r $(dirname "$0")/themes $ALACRITTY_CONFIG_DIR;
 }

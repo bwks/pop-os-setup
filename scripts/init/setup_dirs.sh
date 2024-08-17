@@ -4,8 +4,8 @@ source $(dirname "$0")/../shared.sh;
 
 dirs=(
   ${HOME}/.config/
-  ${HOME}/.local/bin
-  ${HOME}/.local/share/fonts
+  ${HOME}/.local/bin/
+  ${HOME}/.local/share/fonts/
   ${HOME}/.zshrc.local/
 )
 create_dirs() {
