@@ -21,6 +21,7 @@ packages=(
   gnome-shell-extensions
   gnome-tweaks
   chrome-gnome-shell
+  gtk2-engines-murrine
 )
 
 # add gnome-browser-connector instead of chrome-gnome-shell when 

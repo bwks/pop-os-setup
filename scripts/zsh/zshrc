@@ -17,9 +17,8 @@ fi
 # Source local configs
 LOCAL_ZSHRC="$HOME/.zshrc.local"
 if [[ -d "$LOCAL_ZSHRC" ]]; then
-  rc_files=`ls $LOCAL_ZSHRC/*_rc`
-  for rc_file in $rc_files; do
+  for rc_file in $LOCAL_ZSHRC/*; do
     echo "$HR Sourcing $rc_file";
-    source $LOCAL_ZSHRC/$(basename "$rc_file");
+    source "$rc_file";
   done
 fi
