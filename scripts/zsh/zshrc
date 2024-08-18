@@ -10,14 +10,16 @@ plugins=(git)
 # Oh My ZSH
 source $ZSH/oh-my-zsh.sh
 
-# Starship Prompt
-eval "$(starship init zsh)"
+if [[ -d "$HOME/.local/bin" ]]; then
+  PATH="$PATH:$HOME/.local/bin"
+fi
 
 # Source local configs
-LOCAL_ZSHRC="$HOME/.zshrc.local/"
+LOCAL_ZSHRC="$HOME/.zshrc.local"
 if [[ -d "$LOCAL_ZSHRC" ]]; then
   rc_files=`ls $LOCAL_ZSHRC/*_rc`
-  for rc_rile in $rc_rc_riles; do
-    source $file
+  for rc_file in $rc_files; do
+    echo "$HR Sourcing $rc_file";
+    source $LOCAL_ZSHRC/$(basename "$rc_file");
   done
 fi

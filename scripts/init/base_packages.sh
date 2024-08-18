@@ -18,8 +18,13 @@ packages=(
   libxkbcommon-dev
   libegl1-mesa-dev
   unzip
+  gnome-shell-extensions
+  gnome-tweaks
+  chrome-gnome-shell
 )
 
+# add gnome-browser-connector instead of chrome-gnome-shell when 
+# upgraded to 24.04
 echo "$HR Installing Packages";
 
 for pkg in "${packages[@]}"; do
