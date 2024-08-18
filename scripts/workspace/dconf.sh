@@ -4,9 +4,20 @@ source $(dirname "$0")/../shared.sh;
 
 workspace_config() {
   echo "$HR Updating workspace settings";
-  dconf write /org/gnome/desktop/wm/preferences/num-workspaces "5";
-  dconf write /org/gnome/mutter/dynamic-workspaces false;
+
+  dconf write /org/gnome/desktop/interface/monospace-font-name "'CaskaydiaMono Nerd Font Mono 11'";
+  dconf write /org/gnome/desktop/interface/document-font-name "'Ubuntu Nerd Font 11'";
+  dconf write /org/gnome/desktop/interface/font-name "'Ubuntu Nerd Font 10'";
+  dconf write /org/gnome/desktop/interface/font-antialiasing "'rgba'";
+  dconf write /org/gnome/desktop/interface/font-hinting "'full'";
+  dconf write /org/gnome/desktop/interface/text-scaling-factor 1.1000000000000001;
+  dconf write /org/gnome/desktop/interface/clock-show-weekday true;
+
+  dconf write /org/gnome/desktop/wm/preferences/num-workspaces 5;
+  dconf write /org/gnome/desktop/wm/preferences/titlebar-font "'Ubuntu Nerd Font Medium 10'";
   dconf write /org/gnome/desktop/wm/preferences/button-layout "'appmenu:minimize,maximize,close'";
+
+  dconf write /org/gnome/mutter/dynamic-workspaces false;
 
   dconf write /org/gnome/desktop/wm/keybindings/switch-to-workspace-1 "['<Super>1']";
   dconf write /org/gnome/desktop/wm/keybindings/switch-to-workspace-2 "['<Super>2']";
