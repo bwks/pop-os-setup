@@ -33,6 +33,8 @@ workspace_config() {
   dconf write /org/gnome/desktop/wm/keybindings/move-to-workspace-3 "['<Super><Shift>3']";
   dconf write /org/gnome/desktop/wm/keybindings/move-to-workspace-4 "['<Super><Shift>4']";
   dconf write /org/gnome/desktop/wm/keybindings/move-to-workspace-5 "['<Super><Shift>5']";
+
+  dconf write /org/gnome/shell/extensions/pop-shell/active-hint true;
 }
 
 workspace_config;
