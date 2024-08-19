@@ -12,6 +12,9 @@ workspace_config() {
   dconf write /org/gnome/desktop/interface/font-hinting "'full'";
   dconf write /org/gnome/desktop/interface/text-scaling-factor 1.1000000000000001;
   dconf write /org/gnome/desktop/interface/clock-show-weekday true;
+  dconf write /org/gnome/desktop/interface/enable-animations false;
+
+  dconf write /org/gnome/shell/extensions/gsnap/animations-enabled false;
 
   dconf write /org/gnome/desktop/wm/preferences/num-workspaces 5;
   dconf write /org/gnome/desktop/wm/preferences/titlebar-font "'Ubuntu Nerd Font Medium 10'";
